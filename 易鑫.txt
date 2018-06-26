@@ -1,0 +1,58 @@
+cdyx  bj.ali.5.0  120.26.132.75
+    
+192.168.1.160 	114.242.67.50:8033 
+
+192.168.1.161 	114.242.67.50:8044 
+
+192.168.1.162 	114.242.67.50:8055 
+
+
+通话结束：http://crm.yxqiche.com/softPhone-core/outBoundRecord/createOutBountRecord
+
+http://120.26.132.75/cdyx-hangup
+
+满意度：http://crm.yxqiche.com/softPhone-core/outBoundRecord/createIvrSatisfiedRecord
+
+http://120.26.132.75/cdyx-satisfaction
+
+
+
+http://120.26.132.75/cdyx-hangup
+location /cdyx-hangup {
+            proxy_pass http://crm.yxqiche.com/softPhone-core/outBoundRecord/createOutBountRecord;
+            proxy_redirect off;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            client_max_body_size 100m;
+        }
+
+
+http://120.26.132.75/cdyx-satisfaction
+location /cdyx-satisfaction {
+            proxy_pass http://crm.yxqiche.com/softPhone-core/outBoundRecord/createIvrSatisfiedRecord;
+            proxy_redirect off;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            client_max_body_size 100m;
+        }
+
+
+
+
+
+
+{"Command":"Event","FileServer":"http://120.26.96.9","RingingTimestamp":"1523582872.203360","OpType":"end","Account":"N00000007765","Direction":"O","ChannelStatus":"Unlink","ExtenType":"gateway","PBX":"bj.ali.9.5","ProvinceCode":"15","OfferingTime":"1523582870.991831","DistrictCode":"010","DisposalAgent":"0cfd4840-2d53-11e6-8331-25134cbf87b2","__CONNECT_TYPE":"dialout","Comments":"","Labels":[],"OriginID":"cc-ali-0-1523582870.52611","Event":"PeerCallCdr","RecordFileName":"monitor/bj.ali.9.5/20180413/20180413-092752_N00000007765__918611869269_cc-ali-0-1523582870.52611.mp3","Location":"system","CallSheetID":"ca53b274-1de5-4e6e-bba5-c6d6e8ca2057","Province":"\\u5317\\u4eac\\u5e02","CalledNo":"18611869269","Status":"dealing","ErrorMemo":null,"BeginTime":"1523582878.782092","District":"\\u5317\\u4eac\\u5e02","CallNo":"01080697460","EndTime":"1523582910.833","CallID":"cc-ali-0-1523582870.52611"}
+
+
+
+转接的通话：
+
+{"Command":"Event","TransferAgent":"8003","FileServer":"http://120.26.96.9","RingingTimestamp":"1523582904.580481","OpType":"end","Account":"N00000007765","Direction":"O","ChannelStatus":"Unlink","RefCallSheetID":"ca53b274-1de5-4e6e-bba5-c6d6e8ca2057","PBX":"bj.ali.9.5","ProvinceCode":"15","OfferingTime":"1523582910.834","DistrictCode":"010","DisposalAgent":"0cfd4840-2d53-11e6-8331-25134cbf87b2","__CONNECT_TYPE":"dialTransfer","TransferMode":"num","Comments":"","Labels":[],"OriginID":"cc-ali-0-1523582872.52612","Event":"PeerCallCdr","RecordFileName":"monitor/bj.ali.9.5/20180413/20180413-092752_N00000007765__918611869269_cc-ali-0-1523582870.52611o.mp3","Location":"system","CallSheetID":"04874084-e5bc-4558-8308-7c9d46eb4e11","Province":"\\u5317\\u4eac\\u5e02","CalledNo":"13819103672","TransferNum":"13819103672","Status":"dealing","ErrorMemo":null,"BeginTime":"1523582910.834","District":"\\u5317\\u4eac\\u5e02","CallNo":"01080697460","EndTime":"1523583560.014428","CallID":"cc-ali-0-1523582872.52612"}
+
+
+
+
+
+
+
+
