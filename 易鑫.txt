@@ -1,17 +1,17 @@
 cdyx  bj.ali.5.0  120.26.132.75
-   åˆ©æ³¢ 
+    
 192.168.1.160 	114.242.67.50:8033 
-
+¹ş¹ş
 192.168.1.161 	114.242.67.50:8044 
 
 192.168.1.162 	114.242.67.50:8055 
 
 
-é€šè¯ç»“æŸï¼šhttp://crm.yxqiche.com/softPhone-core/outBoundRecord/createOutBountRecord
+Í¨»°½áÊø£ºhttp://crm.yxqiche.com/softPhone-core/outBoundRecord/createOutBountRecord
 
 http://120.26.132.75/cdyx-hangup
 
-æ»¡æ„åº¦ï¼šhttp://crm.yxqiche.com/softPhone-core/outBoundRecord/createIvrSatisfiedRecord
+ÂúÒâ¶È£ºhttp://crm.yxqiche.com/softPhone-core/outBoundRecord/createIvrSatisfiedRecord
 
 http://120.26.132.75/cdyx-satisfaction
 
@@ -45,7 +45,7 @@ location /cdyx-satisfaction {
 
 
 
-è½¬æ¥çš„é€šè¯ï¼š
+×ª½ÓµÄÍ¨»°£º
 
 {"Command":"Event","TransferAgent":"8003","FileServer":"http://120.26.96.9","RingingTimestamp":"1523582904.580481","OpType":"end","Account":"N00000007765","Direction":"O","ChannelStatus":"Unlink","RefCallSheetID":"ca53b274-1de5-4e6e-bba5-c6d6e8ca2057","PBX":"bj.ali.9.5","ProvinceCode":"15","OfferingTime":"1523582910.834","DistrictCode":"010","DisposalAgent":"0cfd4840-2d53-11e6-8331-25134cbf87b2","__CONNECT_TYPE":"dialTransfer","TransferMode":"num","Comments":"","Labels":[],"OriginID":"cc-ali-0-1523582872.52612","Event":"PeerCallCdr","RecordFileName":"monitor/bj.ali.9.5/20180413/20180413-092752_N00000007765__918611869269_cc-ali-0-1523582870.52611o.mp3","Location":"system","CallSheetID":"04874084-e5bc-4558-8308-7c9d46eb4e11","Province":"\\u5317\\u4eac\\u5e02","CalledNo":"13819103672","TransferNum":"13819103672","Status":"dealing","ErrorMemo":null,"BeginTime":"1523582910.834","District":"\\u5317\\u4eac\\u5e02","CallNo":"01080697460","EndTime":"1523583560.014428","CallID":"cc-ali-0-1523582872.52612"}
 
